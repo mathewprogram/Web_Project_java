@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <!--Este corresponde a MiServlet-->
+    <servlet>
+        <servlet-name>MiServlet</servlet-name>
+        <servlet-class>servlet.MiServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServerPostgresql</servlet-name>
+        <servlet-class>ejemploPostgres.ServerPostgresql</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>server_Menu_CRUD_PostgreSQL</servlet-name>
+        <servlet-class>server_PostgreSQL.server_Menu_CRUD_PostgreSQL</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>servlet_examen</servlet-name>
+        <servlet-class>examen_MF0226.servlet_examen</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MiServlet</servlet-name>
+        <url-pattern>/MiServlet</url-pattern>
+    </servlet-mapping>
+    <!--Este corresponde a servlet1-->
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>servlet1.servlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/OtroServlet</url-pattern>
+        <!--Cambiando el nombre aqui y en la ruta podemos ocultar el nombre del fichero actual-->
+    </servlet-mapping>
+    <!--Este corresponde a servlet2-->
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/servlet2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>servlet2.servlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServerPostgresql</servlet-name>
+        <url-pattern>/ServerPostgresql</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>server_Menu_CRUD_PostgreSQL</servlet-name>
+        <url-pattern>/server_Menu_CRUD_PostgreSQL</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>servlet_examen</servlet-name>
+        <url-pattern>/servlet_examen</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.14.0</version>
+        <!-- Use the latest version -->
+    </dependency>
+</web-app>
